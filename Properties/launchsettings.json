@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "Electronic_MuYu (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "Electronic_MuYu (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}
