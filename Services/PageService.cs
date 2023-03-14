@@ -16,6 +16,8 @@ public class PageService : IPageService
     {
         Configure<MainViewModel, MainPage>();
         Configure<SettingsViewModel, SettingsPage>();
+        Configure<AutoViewModel, AutoPage>();
+        Configure<UndateLogsViewModel, UndateLogsPage>();
     }
 
     public Type GetPageType(string key)

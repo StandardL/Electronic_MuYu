@@ -24,6 +24,9 @@
     <AppxBundle>Auto</AppxBundle>
     <AppxBundlePlatforms>x64</AppxBundlePlatforms>
   </PropertyGroup>
+  <ItemGroup>
+    <Page Remove="Dialogs\SaveDialog.xaml" />
+  </ItemGroup>
 
   <ItemGroup>
     <Manifest Include="$(ApplicationManifest)" />
@@ -43,6 +46,9 @@
   <ItemGroup>
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Dialogs\SaveDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>
 

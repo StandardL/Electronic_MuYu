@@ -49,9 +49,17 @@
                 -->
                 <NavigationViewItem x:Uid="Shell_Main" helpers:NavigationHelper.NavigateTo="Electronic_MuYu.ViewModels.MainViewModel">
                     <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xe7c3;" />
+                        <!--  eda4是触摸屏图标  -->
+                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xeda4;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
+                <NavigationViewItem x:Uid="Shell_Auto" helpers:NavigationHelper.NavigateTo="Electronic_MuYu.ViewModels.AutoViewModel">
+                    <NavigationViewItem.Icon>
+                        <!--  ec49是速度图标  -->
+                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xec49;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
             </NavigationView.MenuItems>
             <NavigationView.HeaderTemplate>
                 <DataTemplate>
@@ -60,6 +68,14 @@
                     </Grid>
                 </DataTemplate>
             </NavigationView.HeaderTemplate>
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem x:Uid="Shell_UndateLogs" helpers:NavigationHelper.NavigateTo="Electronic_MuYu.ViewModels.UndateLogsViewModel">
+                    <NavigationViewItem.Icon>
+                        <!--  e81c是历史记录图标  -->
+                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xe81c;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.FooterMenuItems>
             <i:Interaction.Behaviors>
                 <behaviors:NavigationViewHeaderBehavior DefaultHeader="{x:Bind ((ContentControl)ViewModel.Selected).Content, Mode=OneWay}">
                     <behaviors:NavigationViewHeaderBehavior.DefaultHeaderTemplate>

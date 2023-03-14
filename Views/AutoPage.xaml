@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Electronic_MuYu.Views.MainPage"
+    x:Class="Electronic_MuYu.Views.AutoPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -43,19 +43,37 @@
                 Grid.Row="1"
                 Grid.Column="1"
                 Source="/Assets/Mu_Yu.jpg" />
-            <Button
-                x:Name="Knock"
-                x:Uid="Knock"
+
+            <StackPanel
                 Grid.Row="2"
                 Grid.Column="1"
-                Width="150"
-                Height="100"
-                Margin="225,10,0,0"
-                Click="Knock_Click"
-                FontSize="45" />
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <Button
+                    x:Name="Auto_Knock_Start"
+                    x:Uid="Auto_Knock_Start"
+                    Width="125"
+                    Height="75"
+                    Margin="10"
+                    Click="Auto_Knock_Start_Click"
+                    FontSize="35" />
+                <Button
+                    x:Name="Auto_Knock_Stop"
+                    x:Uid="Auto_Knock_Stop"
+                    Width="125"
+                    Height="75"
+                    Margin="10"
+                    Click="Auto_Knock_Stop_Click"
+                    FontSize="35"
+                    RelativePanel.AlignHorizontalCenterWith="Auto_Knock_Start"
+                    RelativePanel.AlignVerticalCenterWith="Auto_Knock_Start"
+                    RelativePanel.RightOf="Auto_Knock_Start" />
+            </StackPanel>
+
+
             <MediaPlayerElement
                 x:Name="Knock_Sound"
-                AutoPlay="False"
+                AutoPlay="True"
                 Source="ms-appx:///Assets/Media/percussion instrument.wav" />
             <StackPanel
                 Grid.Row="1"
@@ -114,5 +132,4 @@
             </StackPanel>
         </Grid>
     </ScrollViewer>
-
 </Page>

@@ -67,6 +67,10 @@ public partial class App : Application
             services.AddSingleton<IFileService, FileService>();
 
             // Views and ViewModels
+            services.AddTransient<UndateLogsViewModel>();
+            services.AddTransient<UndateLogsPage>();
+            services.AddTransient<AutoViewModel>();
+            services.AddTransient<AutoPage>();
             services.AddTransient<SettingsViewModel>();
             services.AddTransient<SettingsPage>();
             services.AddTransient<MainViewModel>();
