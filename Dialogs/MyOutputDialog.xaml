@@ -1,0 +1,17 @@
+<ContentDialog
+    x:Class="Electronic_MuYu.Dialogs.MyOutputDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="OutputDialog"
+    Title="保存当前功德"
+    CloseButtonText="取消"
+    DefaultButton="Primary"
+    PrimaryButtonClick="MyOutputDialog_PrimaryButtonClick"
+    PrimaryButtonText="确定"
+    mc:Ignorable="d">
+    <StackPanel>
+        <TextBlock Text="功德数据文件将会导出至您指定的文件夹内" />
+    </StackPanel>
+</ContentDialog>

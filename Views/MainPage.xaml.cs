@@ -29,14 +29,7 @@ public sealed partial class MainPage : Page
         //string totalGongde = string.Empty;
         //gongDeNumsOOBE.ReadGongDe(totalGongde);
 
-        // 从文件中读取
-        //var totalGongde = string.Empty;
-        //totalGongde = GongDeNumsOOBE.ReadGongDe(totalGongde).Result.ToString();
-
-        //if (totalGongde == "FAILED")
-        //    totalGongde = "读取失败";
-        //LoadingFileProgressRing.IsActive = false;
-        //TotalGongDe_Counter.Text = totalGongde;
+        
     }
 
     private void Knock_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
@@ -61,5 +54,14 @@ public sealed partial class MainPage : Page
     {
         LoadingFileProgressRing.IsActive = false;
         LoadingFileProgressRing.Visibility = Visibility.Collapsed;
+
+        // 从文件中读取
+        var totalGongde = string.Empty;
+        totalGongde = GongDeNumsOOBE.ReadGongDe().Result.ToString();
+
+        if (totalGongde == "FAILED")
+            totalGongde = "读取失败";
+        LoadingFileProgressRing.IsActive = false;
+        TotalGongDe_Counter.Text = totalGongde;
     }
 }

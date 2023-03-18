@@ -1,17 +1,17 @@
-ï»¿<ContentDialog
-    x:Class="Electronic_MuYu.Dialogs.SaveDialog"
+<ContentDialog
+    x:Class="Electronic_MuYu.Dialogs.NewSaveDialog"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="SaveDialog"
-    Title="ä¿å­˜å½“å‰åŠŸå¾·"
-    CloseButtonText="å–æ¶ˆ"
+    Title="±£´æµ±Ç°¹¦µÂ"
+    CloseButtonText="È¡Ïû"
     DefaultButton="Primary"
     PrimaryButtonClick="SaveDialog_PrimaryButtonClick"
-    PrimaryButtonText="ç¡®å®š"
+    PrimaryButtonText="È·¶¨"
     mc:Ignorable="d">
     <StackPanel>
-        <TextBlock Text="æ–‡ä»¶å°†ä¼šä¿å­˜è‡³åº”ç”¨ç¨‹åºçš„æ•°æ®æ–‡ä»¶å¤¹å†…" />
+        <TextBlock Text="ÎÄ¼þ½«»á±£´æÖÁÓ¦ÓÃ³ÌÐòµÄÊý¾ÝÎÄ¼þ¼ÐÄÚ" />
     </StackPanel>
 </ContentDialog>

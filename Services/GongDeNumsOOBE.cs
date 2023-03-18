@@ -30,24 +30,24 @@ class GongDeNumsOOBE
     }
 
     // 从沙盒文件中读取总功德
-    public static async Task<string> ReadGongDe(string GongDeNums)
+    public static async Task<string> ReadGongDe()
     {
         try
         {
             // 尝试读取文件
-            StorageFile storageFile = await localFolder.GetFileAsync(fileName);
+            StorageFile storageFile = localFolder.GetFileAsync(fileName).GetAwaiter().GetResult();
             var gongdeData = await FileIO.ReadTextAsync(storageFile);
-            GongDeNums = gongdeData;
+            //GongDeNums = gongdeData;
             await Task.CompletedTask;
-            return GongDeNums;
+            return gongdeData;
         }
         catch (FileNotFoundException e)
         {
             Debug.WriteLine("功德文件打开失败！错误信息：{0}", e);
             // 读取失败的时候返回Fail
-            GongDeNums = "FAILED";
+            //GongDeNums = "FAILED";
             await Task.CompletedTask;
-            return GongDeNums;
+            return "FAILED";
         }
         catch (IOException e)
         {
@@ -59,6 +59,6 @@ class GongDeNumsOOBE
             }
             throw;
         }
-        return GongDeNums.ToString();
+        //return GongDeNums.ToString();
     }
 }
